@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="This is a database demo app"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:stretchColumns="0,1"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginTop="40dp">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content" >
+                <Button
+                    android:text="@string/createdb"
+                    android:onClick="openDatabase"
+                    android:id="@+id/button"
+                    />
+
+                <Button
+                    android:text="@string/closeDatabase"
+                    android:onClick="closeDatabase"
+                    android:id="@+id/button4"
+                     />
+
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content" >
+                <Button
+                    android:text="@string/insertRow"
+                    android:onClick="insertRow"
+                    android:id="@+id/button2"
+                    />
+
+                <Button
+                    android:text="@string/deleteRow"
+                    android:onClick="deleteRow"
+                    android:id="@+id/button3"
+                     />
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content" >
+                <Button
+                    android:text="@string/selectRec"
+                    android:onClick="getOneRecord"
+                    android:id="@+id/button6" />
+                <Button
+                    android:text="@string/getAllRecords"
+                    android:onClick="getAllRecords"
+                    android:id="@+id/button5" />
+            </TableRow>
+
+
+    </TableLayout>
+
+
+
+</RelativeLayout>
+<!--
+
+
+
+
+            -->
+
+
+
+

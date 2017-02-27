@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DesDatabase0</string>
+    <string name="createdb">Open Database</string>
+    <string name="insertRow">Insert New Row</string>
+    <string name="deleteRow">Delete Row</string>
+    <string name="closeDatabase">Close Database</string>
+    <string name="getAllRecords">Dump Database</string>
+    <string name="selectRec">Select One Record</string>
+</resources>
