@@ -20,6 +20,7 @@ public class DesDBManager {
 
     private SQLiteDatabase db;
     private SQLiteOpenHelper desDBHelper;
+    private boolean isOpen;
 
 
     /*  These agree with the columns in DesDBHelper.  Is there a way to import them directly?
@@ -34,15 +35,18 @@ public class DesDBManager {
     /* The constructor creates the database. */
     public DesDBManager(Context context) {
         this.desDBHelper = new DesDBHelper(context);
+        isOpen = false;
     }
 
     public void open() {
         db = desDBHelper.getWritableDatabase();
+        isOpen = true;
         Log.d(DEBUG_TAG, "desDBHelper opened");
     }
 
     public void close() {
         if (desDBHelper != null) {
+            isOpen = false;
             desDBHelper.close();
             Log.d(DEBUG_TAG, "desDBbHelper closed");
         }
@@ -58,6 +62,10 @@ public class DesDBManager {
     }
 
     public long newEntry(String name, String password) {
+        if (!isOpen) {
+            Log.i(DEBUG_TAG,"trying to insert into close database");
+            return -1;
+        }
         String sql = "INSERT INTO " + DesDBHelper.TABLE_PASSWORD
                 + "(" + DesDBHelper.COLUMN_NAME + "," + DesDBHelper.COLUMN_PASSWORD + ")"
                 + " VALUES (?, ?)";
