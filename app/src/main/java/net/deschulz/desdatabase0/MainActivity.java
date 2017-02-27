@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "desDebug";
-    private static final String TMPSTRING = "this is an update";
 
     private DesDBManager mydatabase = new DesDBManager(this);
 
