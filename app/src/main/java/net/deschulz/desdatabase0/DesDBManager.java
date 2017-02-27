@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 
 public class DesDBManager {
-    public static final String DEBUG_TAG = "DesDBManager";
+    public static final String DEBUG_TAG = "desDebug";
 
     private SQLiteDatabase db;
     private SQLiteOpenHelper desDBHelper;
@@ -41,14 +41,14 @@ public class DesDBManager {
     public void open() {
         db = desDBHelper.getWritableDatabase();
         isOpen = true;
-        Log.d(DEBUG_TAG, "desDBHelper opened");
+        Log.i(DEBUG_TAG, "desDBHelper opened");
     }
 
     public void close() {
         if (desDBHelper != null) {
             isOpen = false;
             desDBHelper.close();
-            Log.d(DEBUG_TAG, "desDBbHelper closed");
+            Log.i(DEBUG_TAG, "desDBbHelper closed");
         }
 
     }

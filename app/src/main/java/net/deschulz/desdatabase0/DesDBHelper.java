@@ -14,7 +14,7 @@ import android.util.Log;
 
 
 public class DesDBHelper extends SQLiteOpenHelper {
-    private static final String DEBUG_TAG = "DesDBHelper";
+    private static final String DEBUG_TAG = "desDebug";
     private static final String DB_NAME = "desDatabase.db";
     private static final int DB_VERSION = 1;
 
